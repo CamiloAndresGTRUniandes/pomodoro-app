@@ -1,0 +1,8 @@
+{
+  "name": "Pomodoro App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "bae37b46"
+}
