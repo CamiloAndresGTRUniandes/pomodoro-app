@@ -1,83 +1,75 @@
 import { Injectable } from '@angular/core';
 
-export interface Message {
+export interface Task {
   fromName: string;
-  subject: string;
-  date: string;
   id: number;
-  read: boolean;
+  completed: boolean;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  public messages: Message[] = [
+  public tasks: Task[] = [
     {
-      fromName: 'Matt Chorsey',
-      subject: 'New event: Trip to Vegas',
-      date: '9:32 AM',
+      fromName: 'Tarea de prueba 1',
       id: 0,
-      read: false
+      completed: false
     },
     {
-      fromName: 'Lauren Ruthford',
-      subject: 'Long time no chat',
-      date: '6:12 AM',
+      fromName: 'Tarea de prueba 2',
       id: 1,
-      read: false
+      completed: false
     },
     {
-      fromName: 'Jordan Firth',
-      subject: 'Report Results',
-      date: '4:55 AM',
+      fromName: 'Tarea de prueba 3',
       id: 2,
-      read: false
+      completed: false
     },
     {
-      fromName: 'Bill Thomas',
-      subject: 'The situation',
-      date: 'Yesterday',
+      fromName: 'Tarea de prueba 4',
       id: 3,
-      read: false
+      completed: false
     },
     {
-      fromName: 'Joanne Pollan',
-      subject: 'Updated invitation: Swim lessons',
-      date: 'Yesterday',
+      fromName: 'Tarea de prueba 5',
       id: 4,
-      read: false
+      completed: false
     },
     {
-      fromName: 'Andrea Cornerston',
-      subject: 'Last minute ask',
-      date: 'Yesterday',
+      fromName: 'Tarea de prueba 6',
       id: 5,
-      read: false
+      completed: false
     },
     {
-      fromName: 'Moe Chamont',
-      subject: 'Family Calendar - Version 1',
-      date: 'Last Week',
+      fromName: 'Tarea de prueba 7',
       id: 6,
-      read: false
+      completed: false
     },
     {
-      fromName: 'Kelly Richardson',
-      subject: 'Placeholder Headhots',
-      date: 'Last Week',
+      fromName: 'Tarea de prueba 8',
       id: 7,
-      read: false
+      completed: false
     }
   ];
 
   constructor() { }
 
-  public getMessages(): Message[] {
-    return this.messages;
+  public getTasks(): Task[] {
+    return this.tasks;
   }
 
-  public getMessageById(id: number): Message {
-    return this.messages[id];
+  public getTaskById(id: number): Task {
+    return this.tasks[id];
+  }
+  public markCompleted(id: number): void {
+    this.tasks[id].completed = !this.tasks[id].completed;
+  }
+  public addTask(task: string) {
+    this.tasks.push({
+      fromName: task,
+      id: this.tasks.length,
+      completed: false
+    });
   }
 }

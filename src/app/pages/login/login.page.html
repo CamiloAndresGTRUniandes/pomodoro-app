@@ -1,0 +1,44 @@
+<ion-content>
+  <div class="card-container">
+
+      <ion-row >
+        <ion-col size="12" class="logo" >
+          <img
+            src="../../../assets/img/pomodoro.svg"
+            alt="Pomodoro logo"
+            loading="lazy"
+          />
+        </ion-col>
+        <ion-col size="12">
+          <ion-card-header class="card-header">
+            <ion-card-title class="app-title"> POMODORO APP </ion-card-title>
+            <ion-card-title class="app-subtitle"> Iniciar sesión / Registrarse </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+           
+              <div class="tel-container">
+                <ion-input 
+                [(ngModel)]="phone"
+                fill="outline"
+                label="Móvil:"
+                shape="round"
+                placeholder="+57 (xxx) xxx-xxxx"
+                [maskito]="phoneMask"
+                [maskitoElement]="maskPredicate"  
+                
+                 required></ion-input>
+              </div>
+              
+              <div class="login-button-container">
+                <ion-button (click)="login()" shape="round" color="primary"> Iniciar Sesión </ion-button>
+              </div>
+              <div>
+                <ion-button (click)="login()"   shape="round" color="primary"> Registrarse </ion-button>
+              </div>
+                  
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+
+  </div>
+</ion-content>

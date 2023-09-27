@@ -1,0 +1,29 @@
+ion-footer{
+    bottom: 0px;
+    position: absolute;
+}
+ion-row{
+    align-items:start;
+    justify-content: center;
+}
+ion-icon{
+    font-size: 26px;
+    margin-top: 1rem;
+}
+.footer{
+    --background: #2997FC;
+    color: white;
+}
+ion-input{
+    font-size: 20px;
+}
+ion-toolbar{
+    height: 70px;
+    align-items: center;
+}
+ion-header{
+    align-items: center;
+}
+ion-list{
+    margin-bottom: 70px;
+}
