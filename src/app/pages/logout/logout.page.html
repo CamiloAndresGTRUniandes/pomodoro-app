@@ -1,0 +1,21 @@
+<ion-content >
+  <ion-card class="tarjeta" shape="round">
+    <ion-card-header>
+      <ion-card-title>Cerrar sesión</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>¿Está seguro que desea salir de alarmas pomodoro?</p>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button class="cancel"  color="light" (click)="cancelar()">Cancelar</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="out" (click)="salir()">Salir</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

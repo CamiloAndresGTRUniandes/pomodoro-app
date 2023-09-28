@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, Input, ViewChild } from '@angular/core';
-import { Platform } from '@ionic/angular';
+import { NavController, Platform } from '@ionic/angular';
 import { DataService, Task } from '../../services/data.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class TaskComponent {
   @ViewChild('popover') popover : any;
 
   isOpen = false;
-
+constructor(public navCtrl: NavController) { }
 
   @Input() task?: Task;
   isIos() {
@@ -29,5 +29,19 @@ export class TaskComponent {
     this.data.markCompleted(id);
     console.log('markCompleted', this.data.getTaskById(id));
   } 
-
+player(){
+  this.navCtrl.navigateForward("/cycle-management");
+}
+eliminar(id : number) {
+  this.isOpen = false;
+  this.popover.dismiss();
+  this.data.deleteTask(id);
+  
+}
+markAsCompleted(id : number) {  
+  this.data.markCompleted(id);
+  console.log('markCompleted', this.data.getTaskById(id));
+  this.isOpen = false;
+  this.popover.dismiss();
+}
 }

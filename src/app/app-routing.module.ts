@@ -25,6 +25,14 @@ const routes: Routes = [
   {
     path: 'logout',
     loadChildren: () => import('./pages/logout/logout.module').then( m => m.LogoutPageModule)
+  },
+  {
+    path: 'time-player',
+    loadChildren: () => import('./pages/time-player/time-player.module').then( m => m.TimePlayerPageModule)
+  },
+  {
+    path: 'cycle-management',
+    loadChildren: () => import('./pages/cycle-management/cycle-management.module').then( m => m.CycleManagementPageModule)
   }
 
 

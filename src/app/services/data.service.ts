@@ -4,6 +4,12 @@ export interface Task {
   fromName: string;
   id: number;
   completed: boolean;
+  workCycleQty?: number;
+  workCyclePlayed?: number;
+  longRestQty?: number;
+  workCycleTime?: number;
+  shortRestTime?: number;
+  longRestTime?: number;
 }
 
 @Injectable({
@@ -14,42 +20,90 @@ export class DataService {
     {
       fromName: 'Tarea de prueba 1',
       id: 0,
-      completed: false
+      completed: false,
+      workCycleQty: 4,
+      workCyclePlayed: 1,
+      longRestQty: 4,
+      workCycleTime: 25,
+      shortRestTime: 5,
+      longRestTime: 15
     },
     {
       fromName: 'Tarea de prueba 2',
       id: 1,
-      completed: false
+      completed: false,
+      workCycleQty: 4,
+      workCyclePlayed: 1,
+      longRestQty: 4,
+      workCycleTime: 25,
+      shortRestTime: 5,
+      longRestTime: 15
     },
     {
       fromName: 'Tarea de prueba 3',
       id: 2,
-      completed: false
+      completed: false,
+      workCycleQty: 4,
+      workCyclePlayed: 1,
+      longRestQty: 4,
+      workCycleTime: 25,
+      shortRestTime: 5,
+      longRestTime: 15
     },
     {
       fromName: 'Tarea de prueba 4',
       id: 3,
-      completed: false
+      completed: false,
+      workCycleQty: 4,
+      workCyclePlayed: 1,
+      longRestQty: 4,
+      workCycleTime: 25,
+      shortRestTime: 5,
+      longRestTime: 15
     },
     {
       fromName: 'Tarea de prueba 5',
       id: 4,
-      completed: false
+      completed: false,
+      workCycleQty: 4,
+      workCyclePlayed: 1,
+      longRestQty: 4,
+      workCycleTime: 25,
+      shortRestTime: 5,
+      longRestTime: 15
     },
     {
       fromName: 'Tarea de prueba 6',
       id: 5,
-      completed: false
+      completed: false,
+      workCycleQty: 4,
+      workCyclePlayed: 1,
+      longRestQty: 4,
+      workCycleTime: 25,
+      shortRestTime: 5,
+      longRestTime: 15
     },
     {
       fromName: 'Tarea de prueba 7',
       id: 6,
-      completed: false
+      completed: false,
+      workCycleQty: 4,
+      workCyclePlayed: 1,
+      longRestQty: 4,
+      workCycleTime: 25,
+      shortRestTime: 5,
+      longRestTime: 15
     },
     {
       fromName: 'Tarea de prueba 8',
       id: 7,
-      completed: false
+      completed: false,
+      workCycleQty: 4,
+      workCyclePlayed: 1,
+      longRestQty: 4,
+      workCycleTime: 25,
+      shortRestTime: 5,
+      longRestTime: 15
     }
   ];
 
@@ -71,5 +125,8 @@ export class DataService {
       id: this.tasks.length,
       completed: false
     });
+  }
+  public deleteTask(id: number) {
+    this.tasks.splice(id, 1);
   }
 }

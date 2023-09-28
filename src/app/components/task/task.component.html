@@ -6,7 +6,7 @@
           <div class="check-container"  (click)="markCompleted(task.id)"><ion-checkbox [ngModel]="task.completed" value="{{ task.completed}}"> </ion-checkbox></div>
         </ion-col>
         <ion-col size="8">
-          <div class="msg-text">{{ task.fromName }}</div>
+          <div class="msg-text" (click)="player()">{{ task.fromName }}</div>
         </ion-col>
         <ion-col size="1">
           <span class="date">
@@ -17,9 +17,9 @@
     </ion-grid>
     <ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
       <ng-template>
-        <ion-content class="ion-padding">Hello World option 1</ion-content>
-        <ion-content class="ion-padding">Hello World option 2</ion-content>
-        <ion-content class="ion-padding">Hello World option 3</ion-content>
+        <ion-content class="ion-padding">Editar</ion-content>
+        <ion-content class="ion-padding" (click)="eliminar(task.id)">Eliminar</ion-content>
+        <ion-content class="ion-padding" (click)="markAsCompleted(task.id)">Marcar como completado</ion-content>
       </ng-template>
     </ion-popover>
   </ion-label>
