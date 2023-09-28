@@ -1,0 +1,97 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="taskList()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Gestión de ciclos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">
+        Gestión de ciclos
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-item>
+    <div class="item-container">
+      <ion-row>
+        <ion-col class="desc-text" size="8">
+          Duración de la sesión de trabajo
+        </ion-col>
+        <ion-col size="4">
+          <ion-select [(ngModel)]="time" justify="end" interface="popover" aria-label="work time" fill="outline">
+            <ion-select-option *ngFor="let time of timeOptions" [value]="time">{{time}} Minutos</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </div>
+    
+  </ion-item>
+  <ion-item>
+    <div class="item-container">
+      <ion-row>
+        <ion-col class="desc-text" size="8">
+          Duración del descanso corto
+        </ion-col>
+        <ion-col size="4">
+          <ion-select [(ngModel)]="shortTime" justify="end" interface="popover" aria-label="work time" fill="outline">
+            <ion-select-option *ngFor="let time of shortTimeOptions" [value]="time">{{time}} Minutos</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </div>
+    
+  </ion-item>
+  <ion-item>
+    <div class="item-container">
+      <ion-row>
+        <ion-col class="desc-text" size="8">
+          Duración del descanso largo
+        </ion-col>
+        <ion-col size="4">
+          <ion-select [(ngModel)]="longTime" justify="end" interface="popover" aria-label="work time" fill="outline">
+            <ion-select-option *ngFor="let time of longTimeOptions" [value]="time">{{time}} Minutos</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </div>
+    
+  </ion-item>
+  <ion-item>
+    <div class="item-container">
+      <ion-row>
+        <ion-col class="desc-text" size="8">
+          Sesiones de trabajo antes de un descanso largo
+        </ion-col>
+        <ion-col size="4">
+          <ion-select [(ngModel)]="sessions" justify="end" interface="popover" aria-label="work time" fill="outline">
+            <ion-select-option *ngFor="let session of sessionOptions" [value]="session">{{session}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-item>
+<div class="item-container">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button class="cancel"  color="light" (click)="cancelar()">Cancelar</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="out" (click)="aceptar()">Aceptar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+  
+</ion-content>
