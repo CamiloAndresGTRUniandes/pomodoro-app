@@ -30,7 +30,7 @@ git clone https://github.com/CamiloAndresGTRUniandes/pomodoro-app.git
 3. Instala dependencias:
 
 ```npm install
-
+```
 
 4. Lanza el servidor para ver la aplicación en http://localhost:8100/ , se abrira la aplicación en tu navegador web predeterminado:
 
