@@ -1,0 +1,26 @@
+<ion-item *ngIf="task" [detail]="false">
+  <ion-label class="ion-text-wrap">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <div class="check-container"  (click)="markCompleted(task.id)"><ion-checkbox [ngModel]="task.completed" value="{{ task.completed}}"> </ion-checkbox></div>
+        </ion-col>
+        <ion-col size="8">
+          <div class="msg-text">{{ task.fromName }}</div>
+        </ion-col>
+        <ion-col size="1">
+          <span class="date">
+            <ion-icon name="ellipsis-horizontal-outline" (click)="ellipsisMenu($event)"></ion-icon>
+          </span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+      <ng-template>
+        <ion-content class="ion-padding">Hello World option 1</ion-content>
+        <ion-content class="ion-padding">Hello World option 2</ion-content>
+        <ion-content class="ion-padding">Hello World option 3</ion-content>
+      </ng-template>
+    </ion-popover>
+  </ion-label>
+  </ion-item>

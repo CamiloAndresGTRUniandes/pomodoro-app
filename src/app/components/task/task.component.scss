@@ -1,0 +1,98 @@
+ion-item {
+  --padding-start: 0;
+  --inner-padding-end: 0;
+}
+
+ion-label {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+ion-item h2 {
+  font-weight: 600;
+  margin: 0;
+}
+
+ion-item p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 95%;
+}
+
+ion-item .date {
+  float: right;
+  align-items: center;
+  display: flex;
+  margin-right: 1rem;
+  color: black;
+}
+
+ion-item ion-icon {
+  color: #c9c9ca;
+}
+
+ion-item ion-note {
+  font-size: 15px;
+  margin-right: 8px;
+  font-weight: normal;
+}
+
+ion-item ion-note.md {
+  margin-right: 14px;
+}
+
+.dot {
+  display: block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  align-self: start;
+  margin: 16px 10px 16px 16px;
+}
+
+.dot-unread {
+  background: var(--ion-color-primary);
+}
+
+ion-footer ion-title {
+  font-size: 11px;
+  font-weight: normal;
+}
+
+ion-checkbox {
+  --size: 25px;
+  --checkbox-background-checked: #329E3D;
+  margin: 0px 10px 8px 16px;
+  
+}
+
+ion-checkbox::part(container) {
+  border-radius: 2px;
+  border: 2px solid #000000;
+}
+.check-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px 0 1px;
+  
+}
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.msg-text{
+  width: 100%; 
+  align-items: center;
+}
+
+ion-col {
+  align-items: center;
+  max-height: 30px;
+}
+
+// ion-popover {
+//   --width: 80px;
+// }
